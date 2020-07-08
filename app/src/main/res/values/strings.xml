@@ -8,7 +8,22 @@
     <string name="from_main">"from Main"</string>
     <string name="to_sub">"  to Sub"</string>
     <string name="from_sub">"from Sub"</string>
+
     <string name="move">move</string>
     <string name="back">back</string>
     <string name="message">message</string>
+
+    <!--LoginActivity-->
+    <string name="prompt_email">名前</string>
+    <string name="prompt_password">社員コード</string>
+    <string name="action_sign_in_short">登録</string>
+    <string name="action_sign_in">登録</string>
+
+    <string name="login_com">ログイン完了</string>
+<!--    <string name="hint1">Message to Sub</string>-->
+<!--    <string name="hint2">Message to Main</string>-->
+    <string name="to_login">"ログイン画面へ"</string>
+    <string name="username">"名前"</string>
+<!--    <string name="to_sub">"  to Sub"</string>-->
+<!--    <string name="from_sub">"from Sub"</string>-->
 </resources>

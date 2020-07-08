@@ -1,6 +1,6 @@
 package com.example.activitytransapp;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,13 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public class SubActivity extends AppCompatActivity {
+public class LoginCompleteActivity extends AppCompatActivity {
 
     private EditText editText;
-    private String user_name;
-    private String user_code;
-
+    private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +22,10 @@ public class SubActivity extends AppCompatActivity {
 
         // to get message from MainActivity
         Intent intent = getIntent();
-        user_name = intent.getStringExtra("userName");
-        user_code = intent.getStringExtra("userCode");
-
-
-        System.out.println("User Name: " + user_name + "User Code: " + user_code);
+        message = intent.getStringExtra(LoginActivity.EXTRA_MESSAGE);
 
         TextView textView = findViewById(R.id.text_view);
-        textView.setText(user_name);
+        textView.setText(message);
 
         editText = findViewById(R.id.edit_text);
 
@@ -40,7 +35,7 @@ public class SubActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 if (editText.getText() != null) {
-                    String str = user_name + editText.getText().toString();
+                    String str = message + editText.getText().toString();
                     intent.putExtra(MainActivity.EXTRA_MESSAGE, str);
                 }
 
